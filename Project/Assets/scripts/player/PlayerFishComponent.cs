@@ -8,4 +8,9 @@ public class PlayerFishComponent : MonoBehaviour {
 	void Start () {
         playerFish = GetComponent<PlayerFish>();
 	}
+    
+    public void ConsumeBlood(float blood, string reason)
+    {
+        playerFish.ConsumeBlood(blood, reason);
+    }
 }

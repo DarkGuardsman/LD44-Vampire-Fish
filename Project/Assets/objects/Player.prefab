@@ -26,6 +26,8 @@ GameObject:
   - component: {fileID: 114820660682635650}
   - component: {fileID: 114077419957924804}
   - component: {fileID: 114267045403464418}
+  - component: {fileID: 114413388295496310}
+  - component: {fileID: 114307125927872326}
   m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
@@ -120,7 +122,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 10
   m_LinearDrag: 1
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.1
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -189,7 +191,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8feb151e39d89d84ca7552f520e1078b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerFish: {fileID: 0}
   speed: 30
+  bloodCost: 0.01
 --- !u!114 &114267045403464418
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -201,8 +205,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79ecc5dbdbbc5341911dedd80c3e0ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerFish: {fileID: 0}
   areaOfAttack: {fileID: 114659052651616586}
   damage: 10
+  bloodCost: 0.1
+--- !u!114 &114307125927872326
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1093051188374438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 560112f876f5746c780eca0d404e7139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 2
+  radiusBackingField: 1
+  heightBackingField: 2
+  centerBackingField: 1
+  locked: 0
+  lockWhenNotMoving: 0
+  agentTimeHorizon: 2
+  obstacleTimeHorizon: 2
+  maxNeighbours: 10
+  layer: 1
+  collidesWith: -1
+  wallAvoidForce: 1
+  wallAvoidFalloff: 1
+  priority: 0.5
+  debug: 0
+--- !u!114 &114413388295496310
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1093051188374438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f8ad13d31c4f2b4a8393246ca0669bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageData: {fileID: 0}
+  rb2d: {fileID: 0}
+  idleBloodCost: 0.01
 --- !u!114 &114502450344824204
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -215,7 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aimDistance: 1
-  rotationSpeed: 50
+  rotationSpeed: 10
 --- !u!114 &114659052651616586
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -15,6 +15,11 @@ public class PlayerFish : MonoBehaviour {
     }
     
 	void FixedUpdate () {
-		damageData.RemoveHealth(idleBloodCost, "IdleCost"); //TODO display death reason
+		ConsumeBlood(idleBloodCost, "IdleCost");
 	}
+    
+    public void ConsumeBlood(float blood, string reason)
+    {
+        damageData.RemoveHealth(blood, reason); //TODO display death reason
+    }
 }

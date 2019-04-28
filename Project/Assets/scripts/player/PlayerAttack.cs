@@ -6,11 +6,15 @@ public class PlayerAttack : PlayerFishComponent {
     
     public TrackInArea areaOfAttack;
     public float damage = 10f;
+    public float bloodCost = 0.1f;
 	
     void FixedUpdate()
     {
-		if (Input.GetMouseButtonDown(0))
+		if (Input.GetMouseButtonDown(0)) //TODO cooldown
         {
+            //Consume blood for moving
+            ConsumeBlood(bloodCost, "Attack");
+        
             //Copy list to prevent concurrent modifications
             List<GameObject> attackTargets = new List<GameObject>();
             attackTargets.AddRange(areaOfAttack.objectsInArea);
