@@ -50,6 +50,9 @@ TagManager:
   - name: Mobs
     uniqueID: 2965697175
     locked: 0
+  - name: Foreground2
+    uniqueID: 155851233
+    locked: 0
   - name: Foreground
     uniqueID: 3224549219
     locked: 0
