@@ -2,17 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour 
+public class PlayerMovement : PlayerFishComponent
 {
     public float speed = 1f;
-    
-    private Rigidbody2D rb2d; 
-
-   
-    void Start()
-    {
-        rb2d = GetComponent<Rigidbody2D> ();
-    }
     
     void FixedUpdate()
     {
@@ -21,6 +13,6 @@ public class PlayerMovement : MonoBehaviour
         //Vector2 movement = new Vector2 (moveHorizontal, moveVertical);
 
         //Add force
-        rb2d.AddForce (transform.up * moveVertical * speed);
+        playerFish.rb2d.AddForce (transform.up * moveVertical * speed);
     }
 }

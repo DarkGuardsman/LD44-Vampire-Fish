@@ -38,6 +38,15 @@ public class DamageData : MonoBehaviour {
         }
     }
     
+    public void RemoveHealth(float hp, string reason)
+    {
+        health -= hp;
+        if(health <= 0)
+        {
+            SetDead();
+        }
+    }
+    
     public void addHealth(float hp)
     {
         health += hp;

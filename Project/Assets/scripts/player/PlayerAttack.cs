@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAttack : MonoBehaviour {
+public class PlayerAttack : PlayerFishComponent {
     
     public TrackInArea areaOfAttack;
     public float damage = 10f;
