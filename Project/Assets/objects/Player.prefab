@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 50234030718546682}
   - component: {fileID: 114820660682635650}
   - component: {fileID: 114077419957924804}
+  - component: {fileID: 114267045403464418}
   m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
@@ -57,6 +58,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4578818927760190}
   - component: {fileID: 58077083105241022}
+  - component: {fileID: 114659052651616586}
   m_Layer: 10
   m_Name: AttackArea
   m_TagString: Untagged
@@ -188,6 +190,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
+--- !u!114 &114267045403464418
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1093051188374438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79ecc5dbdbbc5341911dedd80c3e0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areaOfAttack: {fileID: 114659052651616586}
+  damage: 10
 --- !u!114 &114502450344824204
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -201,6 +216,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aimDistance: 1
   rotationSpeed: 50
+--- !u!114 &114659052651616586
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1858991591702158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b31676d7f6d664947a6b68d69b135115, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerToCheck: 9
+  objectsInArea: []
 --- !u!114 &114820660682635650
 MonoBehaviour:
   m_ObjectHideFlags: 1
