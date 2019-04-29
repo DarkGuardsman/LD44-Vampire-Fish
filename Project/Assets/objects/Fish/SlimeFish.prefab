@@ -257,13 +257,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: -1
-  maxHealth: 30
+  maxHealth: 300
   dead: 0
   destroyOnDeath: 1
   prefabToSpawnOnDeath: {fileID: 0}
-  bloodDropChange: 1
+  bloodDropChange: 0.3
   bloodDropAmount: 1
-  bloodDropPercentage: 1
+  bloodDropPercentage: 0.1
   prefabBloodDrops: {fileID: 1622619558378602, guid: 315ed602feb6f964f89eb34fb6ae251e,
     type: 2}
 --- !u!114 &114838905536526132
