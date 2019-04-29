@@ -12,7 +12,7 @@ class MakeBuilds : MonoBehaviour
 {
     public const string scene = "Assets/Scenes/SampleScene.unity";
     public const string runName = "Game";
-    public const string gameName = "Vampire_Fish;
+    public const string gameName = "Vampire_Fish";
     public static string version = "0.2.3";
     
     [MenuItem("Build/All")]
