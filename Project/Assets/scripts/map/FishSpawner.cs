@@ -9,7 +9,7 @@ public class FishSpawner : MonoBehaviour {
     
     public float rotationOffset = 90;
     
-    public GameObject prefabToSpawn;
+    public GameObject[] prefabToSpawns;
 	
 	public GameObject currentFish;
 	public float respawnTimer = 0;
@@ -30,6 +30,7 @@ public class FishSpawner : MonoBehaviour {
 	
 	public void spawnFish()
     {
+        GameObject prefabToSpawn = prefabToSpawns[Random.Range(0, prefabToSpawns.Length)];
 		//create new fish
 		currentFish = Instantiate(prefabToSpawn, transform.position, Quaternion.Euler(0, 0, rotationOffset));
         

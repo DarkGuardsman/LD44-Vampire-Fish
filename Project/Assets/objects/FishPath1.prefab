@@ -64,8 +64,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1313533872537004}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.36, y: 4.11, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 17.78, y: -1.71, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4988352947080368}
@@ -80,7 +80,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1343657115807542}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.74, y: 0, z: 0}
+  m_LocalPosition: {x: 5.14, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4349023893624896}
@@ -112,8 +112,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetA: {fileID: 4988352947080368}
   targetB: {fileID: 4639906736512320}
-  prefabToSpawn: {fileID: 1325149663261672, guid: 0f4d2177d18b9a64b9c69dd110ff8440,
-    type: 2}
+  rotationOffset: 90
+  prefabToSpawns: []
+  currentFish: {fileID: 0}
+  respawnTimer: 0
+  respawnDelay: 10
 --- !u!114 &114286773292104496
 MonoBehaviour:
   m_ObjectHideFlags: 1
