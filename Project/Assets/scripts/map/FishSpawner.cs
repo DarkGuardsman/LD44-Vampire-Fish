@@ -10,12 +10,31 @@ public class FishSpawner : MonoBehaviour {
     public float rotationOffset = 90;
     
     public GameObject prefabToSpawn;
+	
+	public GameObject currentFish;
+	public float respawnTimer = 0;
+	public float respawnDelay = 10f;
     
-	// Use this for initialization
-	void Start () 
+	public void FixedUpdate()
+	{
+		if(currentFish == null)
+		{
+			respawnTimer -= Time.fixedDeltaTime;
+			if(respawnTimer <= 0)
+			{
+				spawnFish();
+				respawnTimer = respawnDelay;
+			}
+		}
+	}
+	
+	public void spawnFish()
     {
-		GameObject fish = Instantiate(prefabToSpawn, transform.position, Quaternion.Euler(0, 0, rotationOffset));
-        MoveBetweenPoints moveBetweenPoints = fish.GetComponent<MoveBetweenPoints>();
+		//create new fish
+		currentFish = Instantiate(prefabToSpawn, transform.position, Quaternion.Euler(0, 0, rotationOffset));
+        
+		//Setup waypoints
+		MoveBetweenPoints moveBetweenPoints = currentFish.GetComponent<MoveBetweenPoints>();
         if(moveBetweenPoints != null)
         {
             moveBetweenPoints.targetA = targetA;
