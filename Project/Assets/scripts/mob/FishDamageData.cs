@@ -10,10 +10,18 @@ public class FishDamageData : DamageData {
     
     public GameObject prefabBloodDrops;
     
+    public  AudioSource audioData;
+    
     protected override void OnAttacked(float damage, GameObject source)
     {
         if(damage > 0)
         {
+            //Play damage audio
+            if(audioData != null)
+            {
+                audioData.Play(0);
+            }
+             
             if(prefabBloodDrops != null)
             {
                 //Calculate blood drops to spawn

@@ -7,6 +7,8 @@ public class PlayerAttack : PlayerFishComponent {
     public TrackInArea areaOfAttack;
     public float damage = 10f;
     public float bloodCost = 0.1f;
+    
+    public  AudioSource audioData;
 	
     void FixedUpdate()
     {
@@ -18,6 +20,9 @@ public class PlayerAttack : PlayerFishComponent {
             //Copy list to prevent concurrent modifications
             List<GameObject> attackTargets = new List<GameObject>();
             attackTargets.AddRange(areaOfAttack.objectsInArea);
+            
+            //Play attack audio
+            audioData.Play(0);
             
             //Loop targets
             foreach(GameObject target in attackTargets)
